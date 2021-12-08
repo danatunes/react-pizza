@@ -1,6 +1,5 @@
-import React, {memo, useState} from 'react';
+import React, {memo} from 'react';
 import PropTypes from "prop-types";
-import PizzaBlock from "./PizzaBlock";
 
 const Categories = memo(({activeCategory, items, onClickCategory}) => {
 

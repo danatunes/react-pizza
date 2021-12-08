@@ -64,7 +64,7 @@ function Home() {
                     isLoaded
                         ?
                     pizzas.map((pizza) => (
-                        <PizzaBlock onClickAddPizza={handleAddPizzaToCart} cartPizzaCount={cartItems[pizza.id] && cartItems[pizza.id].length} key={pizza.id} {...pizza}/>
+                        <PizzaBlock onClickAddPizza={handleAddPizzaToCart} cartPizzaCount={cartItems[pizza.id] && cartItems[pizza.id].items.length} key={pizza.id} {...pizza}/>
                     ))
                         :
                         Array(10).fill(0).map((_, index)=><LoadingBlock key={index}/>)
@@ -72,6 +72,6 @@ function Home() {
             </div>
         </div>
     );
-};
+}
 
 export default Home;
